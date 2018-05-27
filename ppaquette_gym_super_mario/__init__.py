@@ -1,5 +1,6 @@
 from gym.envs.registration import register
-from gym.scoreboard.registration import add_task, add_group
+# Removed Scoreboard registration because gym.scoreboard was removed from gym project
+# from gym.scoreboard.registration import add_task, add_group
 from .package_info import USERNAME
 from .nes_env import NesEnv, MetaNesEnv
 from .super_mario_bros import SuperMarioBrosEnv, MetaSuperMarioBrosEnv
@@ -41,34 +42,35 @@ for draw_tiles in range(2):
             nondeterministic=True,
         )
 
+# Removed Scoreboard registration because gym.scoreboard was removed from gym project
 # Scoreboard registration
 # ==========================
-add_group(
-    id= 'super-mario',
-    name= 'SuperMario',
-    description= '32 levels of the original Super Mario Bros game.'
-)
-
-add_task(
-    id='{}/meta-SuperMarioBros-v0'.format(USERNAME),
-    group='super-mario',
-    summary='Compilation of all 32 levels of Super Mario Bros. on Nintendo platform - Screen version.',
-)
-add_task(
-    id='{}/meta-SuperMarioBros-Tiles-v0'.format(USERNAME),
-    group='super-mario',
-    summary='Compilation of all 32 levels of Super Mario Bros. on Nintendo platform - Tiles version.',
-)
-
-for world in range(8):
-    for level in range(4):
-        add_task(
-            id='{}/SuperMarioBros-{}-{}-v0'.format(USERNAME, world + 1, level + 1),
-            group='super-mario',
-            summary='Level: {}-{} of Super Mario Bros. on Nintendo platform - Screen version.'.format(world + 1, level + 1),
-        )
-        add_task(
-            id='{}/SuperMarioBros-{}-{}-Tiles-v0'.format(USERNAME, world + 1, level + 1),
-            group='super-mario',
-            summary='Level: {}-{} of Super Mario Bros. on Nintendo platform - Tiles version.'.format(world + 1, level + 1),
-        )
+# add_group(
+#     id= 'super-mario',
+#     name= 'SuperMario',
+#     description= '32 levels of the original Super Mario Bros game.'
+# )
+# 
+# add_task(
+#     id='{}/meta-SuperMarioBros-v0'.format(USERNAME),
+#     group='super-mario',
+#     summary='Compilation of all 32 levels of Super Mario Bros. on Nintendo platform - Screen version.',
+# )
+# add_task(
+#     id='{}/meta-SuperMarioBros-Tiles-v0'.format(USERNAME),
+#     group='super-mario',
+#     summary='Compilation of all 32 levels of Super Mario Bros. on Nintendo platform - Tiles version.',
+# )
+# 
+# for world in range(8):
+#     for level in range(4):
+#         add_task(
+#             id='{}/SuperMarioBros-{}-{}-v0'.format(USERNAME, world + 1, level + 1),
+#             group='super-mario',
+#             summary='Level: {}-{} of Super Mario Bros. on Nintendo platform - Screen version.'.format(world + 1, level + 1),
+#         )
+#         add_task(
+#             id='{}/SuperMarioBros-{}-{}-Tiles-v0'.format(USERNAME, world + 1, level + 1),
+#             group='super-mario',
+#             summary='Level: {}-{} of Super Mario Bros. on Nintendo platform - Tiles version.'.format(world + 1, level + 1),
+#         )
