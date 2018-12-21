@@ -17,6 +17,6 @@ setup(name='{}-{}'.format(USERNAME, 'gym-super-mario'),
     package_data={ '{}_{}'.format(USERNAME, 'gym_super_mario'): ['lua/*.lua', 'roms/*.nes' ] },
     zip_safe=False,
     install_requires=[ 
-        'gym==0.10.5'
+        'gym>=0.10.5'
     ],
 )
